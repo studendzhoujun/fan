@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>time</title>
+	<script>
+	    function toDouble(n){
+	    	return n<10?'0'+n:n;
+	    }
+	      window.onload=function(){
+
+	      	clock();
+	     function clock(){
+	        var oDate=new Date();
+	      	var Y=oDate.getFullYear();
+	      	var M=oDate.getMonth()+1;
+	      	var D=oDate.getDate();
+	      	var h=oDate.getHours();
+	      	var m=oDate.getMinutes();
+	      	var s=oDate.getSeconds();
+	      	var d=oDate.getDay();
+	      	var str='日一二三四五六'
+	      	document.body.innerHTML=(Y+','+toDouble(M)+','+toDouble(D)+','+toDouble(h)+','+toDouble(m)+','+toDouble(s)+','+'星期'+str[d])
+	     }
+	     setInterval(clock,1000)
+	      };
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

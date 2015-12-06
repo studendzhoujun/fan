@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+	<style>
+       *{margin:0;padding:0;}
+       #c1{background:#111;}
+       body{background:#fff;}
+	</style>
+	<script>
+          window.onload=function(){
+          	var oC=document.querySelector('#c1');
+          	var gc=oC.getContext('2d');
+          	var oImg=new Image();
+          	oImg.src='1.png';
+          	oImg.onload=function(){
+          		
+          	  gc.drawImage(oImg,0,0,293,271,100,100,293,271)
+            };
+          };
+	</script>
+</head>
+<body>
+	<canvas id="c1" width="800" height="600"></canvas>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>setstyle</title>
+	<style>
+      .div1{width:100px;height:100px;background:#090;}
+	</style>
+	<script>
+	     // function setStyle(obj,sName,sValue){
+	      	//obj.style[sName]=sValue
+	      //}
+	     // function setStyle(obj,json){
+           //    for(var name in json){
+             //  	obj.style[name]=json[name]
+               //}
+	      //}
+	      function setStyle(){
+	      	if(arguments.length==3){
+	      		arguments[0].style[arguments[1]]=arguments[2];
+	      	}else if(arguments.length==2){
+	      		
+	      		for(var name in arguments[1]){
+	      			arguments[0].style[name]=arguments[1][name]
+	      		}
+	      	}
+	      }
+          window.onload=function(){
+          	   var oDiv1=document.querySelector('.div1');
+          	 //  oDiv1.style.width='200px';
+          	 //  oDiv1.style.height='200px';
+          	 //  oDiv1.style.background='red';
+          	 //setStyle(oDiv1,'width','400px');
+          	 //setStyle(oDiv1,'height','500px');
+          	/// setStyle(oDiv1,'background','blue');
+          	 setStyle(oDiv1,{width:'400px',height:'500px',background:'red'})
+
+          };
+	</script>
+</head>
+<body>
+	<div class="div1"></div>
+</body>
+</html>

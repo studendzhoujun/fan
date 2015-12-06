@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getstyle</title>
+	<style>
+      .div1{width:100px;height:100px;background:#090;}
+	</style>
+	<script>
+	     function getStyle(obj,sName){
+	     	if(obj.currentStyle){
+	     	     return obj.currentStyle[sName]
+	     	}else{
+                 return getComputedStyle(obj,false)[sName]
+	     	}
+	     }
+          window.onload=function(){
+          	   var oDiv1=document.querySelector('.div1');
+          	    //alert(oDiv1.currentStyle)
+          	   // alert(getComputedStyle(oDiv1,false)['width'])
+          	   alert(getStyle(oDiv1,'width'))
+          	 
+          };
+	</script>
+</head>
+<body>
+	<div class="div1"></div>
+</body>
+</html>
