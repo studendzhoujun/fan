@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html5</title>
+	<script>
+         window.onload=function(){
+
+         	function step(a){
+         		return function(x){
+         			return x+a++;
+         		}
+         	}
+         	var a=step(10);
+         	var b=step(20);
+         	alert(step(10))
+         	
+         };
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>str</title>
+	<style>
+        *{margin:0;padding:0;}
+        body{height:2000px;}
+	</style>
+	<script>
+        
+       window.onload=function(){
+       	       document.onmousemove=function(ev){
+                    var oEvent=ev||event;
+                   // var scrollT=document.documentElement.scrollTop||document.body.scrollTop;
+                   document.title=oEvent.pageX+','+oEvent.pageY;
+       	       };
+       };
+        
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

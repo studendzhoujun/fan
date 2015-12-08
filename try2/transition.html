@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+         *{margin:0;padding:0;}
+         body{overflow:hidden;height:2000px;width:100%;border:1px solid #ccc;}
+         div{width:100px;height:100px;background:#090;position:absolute;left:-400px;top:200px;-webkit-transition:1s all ease;}
+         p{width:100px;height:100px;background:#909;position:absolute;right:-400px;top:200px;-webkit-transition:1s all ease;}
+	</style>
+	<script>
+        window.onload=function(){
+        	
+        	var oDiv=document.querySelector('div');
+        	var oP=document.querySelector('p');
+        	document.onmousemove=function(){
+                     oDiv.style.left='400px';
+                     oP.style.right='400px'
+        	};
+        };
+	</script>
+</head>
+<body>
+    
+	<div></div>
+	<p></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html</title>
+	<style>
+       *{margin:0;padding:0;}
+       div{width:100px;height:100px;background:red;position:absolute;left:0;top:0;}
+	</style>
+	<script>
+        window.onload=function(){
+        	var oDiv=document.querySelector('div');
+        	oDiv.onclick=function(){
+        		var left=0;
+        		var ispeed=40;
+        		setInterval(function(){
+        			ispeed+=(600-left)/5;
+        			ispeed*=0.7;
+        			left+=ispeed;
+        			oDiv.style.left=left+'px';
+        		},30)
+        	};
+        };
+	</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>src</title>
+	<style>
+     *{margin:0;padding:0;}
+     li{list-style:none;width:100px;height:100px;background:#399;float:left;margin:10px;}
+	</style>
+	<script>
+          window.onload=function(){
+          	var oUl=document.querySelector('ul');
+          	oUl.onclick=function(ev){
+          		var oEvent=ev||event;
+          		var oS=oEvent.srcElement||oEvent.target;
+          		oS.style.background='blue';
+          	};
+          };
+	</script>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
