@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div</title>
+	<style>
+        *{margin:0;padding:0;}
+        div{width:100px;height:100px;background:#ccc;}
+	</style>
+	<script>
+     window.onload=function(){
+     	var oDiv=document.querySelector('div');
+     	oDiv.disabled=true;
+     	oDiv.onclick=function(){
+     		this.style.background='red';
+     	};
+     };
+	</script>
+</head>
+<body>
+	<div>ddd</div>
+</body>
+</html>

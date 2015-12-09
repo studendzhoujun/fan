@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cubic</title>
+	<style>
+          *{margin:0;padding:0;list-style:none;}
+          div{width:1000px;height:500px;background:#ccc;position:absolute;left:50%;top:50%;margin-left:-500px;margin-top:-250px;}
+          ul{width:1000px;height:500px;position:absolute;left:0;top:0;-webkit-transform-style:preserve-3d;-webkit-transition:2s all ease;-webkit-transform:perspective(800px) translateZ(-500px) rotateX(0deg);}
+          ul li{width:1000px;height:500px;position:absolute;left:0;top:0;}
+          .f{background:url(1.jpg);-webkit-transform:translateY(-250px) rotateX(90deg);}
+          .b{background:url(2.jpg);-webkit-transform:translateY(250px) rotateX(-90deg);}
+          .t{background:url(3.jpg);-webkit-transform:translateZ(-250px) scale(1,-1);}
+          .bb{background:url(4.jpg);-webkit-transform:translateZ(250px);}
+          
+	</style>
+	<script>
+            window.onload=function(){
+            	var oUl=document.querySelector('ul');
+            	var i=0;
+            	setInterval(function(){
+            		i++;
+            		oUl.style.WebkitTransform='perspective(800px) translateZ(-500px) rotateX('+i+'deg)';
+            		
+            	},30)
+            };
+	</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li class="f"></li>
+			<li class="b"></li>
+			<li class="t"></li>
+			<li class="bb"></li>
+		</ul>
+	</div>
+</body>
+</html>
