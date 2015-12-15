@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>startmove2</title>
+	<style>
+          *{margin:0;padding:0;}
+          #box{width:200px;height:200px;background:#909;position:absolute;left:0;top:0;}
+          #box1{width:1px;height:400px;background:#111;position:absolute;left:500px;top:0;}
+	</style>
+	<script>
+	function startMove(obj,iTarget){
+		clearInterval(timer)
+		var left=0;
+		var speed=5;
+		var timer=null
+		timer=setInterval(function(){
+			speed+=(iTarget-left)/5;
+			speed*=0.7;
+			left+=speed;
+			obj.style.left=left+'px';
+			if(Math.floor(speed)==0&&Math.floor(left)==iTarget){
+				clearInterval(timer)
+			}
+		},30);
+	}
+          window.onload=function(){
+          	var oBox=document.querySelector('#box');
+          	oBox.onclick=function(){
+          	startMove(oBox,500)
+            }
+          };
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+	<div id="box1"></div>
+</body>
+</html>
