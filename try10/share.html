@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>share</title>
+	<style>
+	    div{width:100px;height:100px;background:pink;}
+	</style>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script>
+          function shareSina(title,desc,imgsrc){
+          	//var url=location.href;
+          	var url='http://junzhouzj.sinaapp.com/jun/';
+          	var params={
+          		Url:url,
+          		Title:title+'_'+desc,
+          		Imgsrc:imgsrc
+          	};
+          	var share='?url='+encodeURIComponent(params.Url)+'&title='+encodeURIComponent(params.Title)+'&pic='+encodeURIComponent(params.Imgsrc)+'&appkey=&searchPic=true';
+          	window.open('http://service.weibo.com/share/mobile.php'+share,'_blank')
+
+
+          }
+          function shareQQ(title,desc,imgsrc){
+          	//var url=location.href;
+          	var url='http://junzhouzj.sinaapp.com/jun/';
+          	var params={
+          		Url:url,
+          		Title:title,
+          		Desc:desc,
+          		Imgsrc:imgsrc
+          	};
+          	var share='?url='+encodeURIComponent(params.Url)+'&title='+encodeURIComponent(params.Title)+'&pics='+encodeURIComponent(params.Imgsrc)+'&desc='+encodeURIComponent(params.Desc)+'&site=&searchPic=true';
+          	window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey'+share,"_blank")
+
+
+          }
+          //
+          function weixinShareTimeline(title,desc,link,imgUrl){
+          	WeixinJSBridge.invoke('shareTimeline',{
+          		Url:link,
+          		Title:title,
+          		Desc:desc,
+          		Imgsrc:imgsrc
+          	})
+          }
+          //
+          window.onload=function(){
+          	var oSina=document.querySelector('.sina');
+          	var oQQ=document.querySelector('.qq');
+          	oSina.onclick=function(){
+          		shareSina('呵呵','this is description','http://pic14.nipic.com/20110522/7411759_164157418126_2.jpg')
+          	};
+          	oQQ.onclick=function(){
+          		shareQQ('呵呵','this is description','http://pic14.nipic.com/20110522/7411759_164157418126_2.jpg')
+          	};
+          };
+
+	</script>
+</head>
+<body>
+	<div class="sina">tosina</div>
+	<div class="qq">toQQzone</div>
+</body>
+</html>
