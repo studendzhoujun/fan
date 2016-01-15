@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>class</title>
+	<style>
+       *{margin:0;padding:0;}
+       .on{background:red;}
+	</style>
+	<script>
+        window.onload=function(){
+        	var ali=document.querySelectorAll('li');
+        	for(var i=0;i<ali.length;i++){
+        		if(ali[i].getAttribute('fote')=='1'){
+        			ali[i].className='on';
+        		}else{
+        			ali[i].className='';
+        		}
+        	}
+        	for(var i=0;i<ali.length;i++){
+        		ali[i].onclick=function(){
+        			for(var j=0;j<ali.length;j++){
+        				ali[j].setAttribute('fote','')
+        			}
+        			this.setAttribute('fote','1');
+
+        			for(var i=0;i<ali.length;i++){
+        		if(ali[i].getAttribute('fote')=='1'){
+        			ali[i].className='on';
+        		}else{
+        			ali[i].className='';
+        		}
+        	}
+
+        		};
+        	}
+        };
+	</script>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li fote="1">3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+</html>
