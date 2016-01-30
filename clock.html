@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>studentzhoujun</title>
+	<style>
+      *{margin:0;padding:0;}
+      body{background:#111;}
+      #box{width:4px;height:200px;background:#090;position:absolute;left:600px;top:100px;-webkit-transition:1s all ease;-webkit-transform:rotate(0deg);-webkit-transform-origin:top center;}
+      #box span{width:50px;height:50px;background:#909;border-radius:50%;position:absolute;left:-25px;top:200px;}
+      #box em{width:10px;height:10px;background:yellow;border-radius:50%;position:absolute;left:-3px;top:-5px;}
+      #time{width:150px;height:50px;color:red;font-size:30px;position:absolute;left:550px;top:50px;}
+      .l{width:1px;height:350px;background:yellow;position:absolute;left:463px;top:10px;}
+      .r{width:1px;height:350px;background:yellow;position:absolute;left:737px;top:10px;}
+      .b{width:274px;height:1px;background:yellow;position:absolute;left:463px;top:360px;}
+	</style>
+	<script>
+	function rnd(n,m){
+		return parseInt(n+Math.random()*(m-n));
+	}
+	function toDouble(num){
+		return num<10?'0'+num:num;
+	}
+	window.onload=function(){
+	   var a=1;
+	   var oBox=document.querySelector('#box');
+	   var oTime=document.querySelector('#time');
+	   var aP=document.querySelectorAll('p');
+	   var oEm=document.querySelector('em');
+	   var oSpan=document.querySelector('span');
+	   function changeCo(){
+	   	    for(var i=0;i<aP.length;i++){
+
+            aP[i].style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+            }
+            oBox.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+            oTime.style.color='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+            oEm.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+            oSpan.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+	   };
+	   function clock(){
+	   	var oDate=new Date();
+	   	var h=oDate.getHours();
+	   	var m=oDate.getMinutes();
+	   	var s=oDate.getSeconds();
+           oTime.innerHTML=toDouble(h)+':'+toDouble(m)+':'+toDouble(s);
+	   }
+	   clock();
+	  setInterval(function(){
+        if(a){
+           a=0;
+        }else{
+           a=1;
+        }
+        if(a){
+            oBox.style.WebkitTransform='rotate(-30deg)';
+           /* for(var i=0;i<aP.length;i++){
+
+            aP[i].style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+            }*/
+            changeCo();
+        }else{
+        	oBox.style.WebkitTransform='rotate(30deg)';
+        	changeCo();
+        }
+        clock();
+      },1000)
+     }
+	</script>
+</head>
+<body>
+	<div id="box">
+	     <em></em>
+		<span></span>
+	</div>
+	<div id="time"></div>
+	<p class="l"></p>
+	<p class="r"></p>
+	<p class="b"></p>
+</body>
+</html>
