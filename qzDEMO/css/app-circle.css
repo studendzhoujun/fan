@@ -1,0 +1,157 @@
+.gomeQz{
+	width:100%;
+	font-family: '微软雅黑';
+	background:#69656F;
+}
+.Qz-foryou{
+	margin-top:0.2rem;
+}
+.Qz-imgTab{
+	width:100%;
+	height:4rem;
+	background:url(../images/hg-topp.png);
+	background:blue;
+	background-size:100%;
+	position:relative;
+	left:0;top:0;
+}
+.Qz-shareBtn{
+	width:2.4rem;
+	height:0.77rem;
+	position:absolute;
+	left:4.55rem;top:2.0rem;
+	background:red;
+}
+.Qz-shareText{
+	font-size:0.4rem;
+}
+.Qz-time{
+	width:100%;
+	height:1.26rem;
+	position:relative;
+	top:0;
+	left:0;
+}
+.Qz-time .time-over{
+	width:7.10rem;
+	height:1.26rem;
+	position:absolute;
+	left:0.20rem;
+	top:0;
+	font-size:0.3rem;
+	text-align:center;
+	line-height: 1.26rem;
+	color:#f90;
+	/* background:url(../images/hg-meiyi2p.png);
+	background-size: 100%; */
+}
+.Qz-foryou .foryou-quanzi{
+	width:3.45rem;
+	height:4.80rem;
+	background:#fff;
+	float:left;
+	margin:0 0 0.21rem 0.20rem;
+}
+.foryou-quanzi-time{
+	font-size:0.2rem;
+}
+.foryou-quanzi-img{
+	width:100%;
+	height:3rem;
+	background:#ccc;
+}
+.foryou-quani-btn1{
+	width:3rem;height:1rem;
+	background:#909;
+	border-radius:10px;
+	margin-left:0.2rem;
+	font-size:0.5rem;
+	text-align:center;
+	line-height:1rem;
+}
+.foryou-quani-btn2{
+	width:3rem;height:1rem;
+	background:#909;
+	border-radius:10px;
+	margin-left:0.2rem;
+	font-size:0.4rem;
+	text-align:center;
+	line-height:1rem;
+	display:none;
+}
+.foryou-quani-btn3{
+	width:3rem;height:1rem;
+	background:#909;
+	border-radius:10px;
+	margin-left:0.2rem;
+	font-size:0.5rem;
+	text-align:center;
+	line-height:1rem;
+	display:none;
+}
+.Qz-user{
+	width:100%;
+	height:3rem;
+	background:#090;
+}
+.Qz-rule{
+	width:100%;
+	height:4rem;
+	background:#c90;
+}
+.window-share{ 
+	position: fixed; 
+	left: 0; bottom: -4rem; 
+	width: 100%; z-index: 20; 
+	background: #fff; 
+	padding-top: .4rem;
+}
+.window-share li{ 
+	width: 1rem; 
+	float: left;
+	font-size: .24rem; 
+	margin-left:1.7rem; 
+	text-align: center;
+}
+.window-share li a{ 
+	display: block; 
+	color: #333;
+}
+.window-share li p{ 
+	padding: .3rem 0 .4rem;
+}
+.window-share .change-btn{ 
+	display: block; height: 1rem; 
+	line-height: 1rem; font-size: .33rem; 
+	border-top: 1px solid #d5d5d5; text-align: center; color: #333;
+}
+.window-share img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.window-bg{ 
+	position: fixed; 
+	left: 0; top: 0; 
+	width: 100%; height: 100%; 
+	z-index: 10; 
+	background: rgba(51,51,51,0.75); 
+	display: none;
+}
+.download{
+	width:100%;
+	height:1.40rem;
+	position:relative;
+	top:0;left:0;
+	display:none;
+}
+.download .download-now{
+	width:7.10rem;
+	height:1.18rem;
+	position:absolute;
+	left:0.20rem;
+	background:url(../images/hg-downp.png);
+	background-size:100%;
+	border-radius:4px;
+	text-indent:-999rem;
+}

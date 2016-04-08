@@ -1,0 +1,137 @@
+.gomeQz{
+	width:100%;
+	font-family: '微软雅黑';
+	background:#742add;
+}
+.Qz-foryou{
+	margin-top:0.2rem;
+}
+.Qz-imgTab{
+	width:100%;
+	height:7.65rem;
+	background:url(../images/hg-topp.png);
+	background-size:100%;
+	position:relative;
+	left:0;top:0;
+}
+.Qz-shareBtn{
+	width:2.4rem;
+	height:0.77rem;
+	position:absolute;
+	left:2.55rem;top:5.0rem;
+}
+.Qz-shareText{
+	font-size:0.4rem;
+}
+.Qz-active{
+	width:100%;
+	height:1.26rem;
+	position:relative;
+	top:0;
+	left:0;
+}
+.Qz-active .Qz-meiyi{
+	width:7.10rem;
+	height:1.26rem;
+	position:absolute;
+	left:0.20rem;
+	top:0;
+	background:url(../images/hg-meiyi2p.png);
+	background-size: 100%;
+}
+.Qz-foryou .foryou-shop{
+	width:3.45rem;
+	height:4.80rem;
+	background:#fff;
+	float:left;
+	margin:0 0 0.21rem 0.20rem;
+}
+.Qz-foryou .foryou-shop img{
+    width:3.25rem;
+    height:3.0rem;
+    margin:0.2rem 0.1rem 0 0.1rem;
+}
+.foryou-shop .foryou-shop-font1{
+	font-size:0.25rem;
+	color:#333333;
+	width:100%;
+	height:0.9rem;
+	padding:0.1rem 0.2rem 0 0.2rem;
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.foryou-shop .foryou-shop-font2{
+	width:100%;
+	height:0.50rem;
+	font-size:0.20rem;
+	padding:0.1rem 0 0 0.18rem;
+	color:#ee2f2f;
+}
+.foryou-shop .foryou-shop-font2 .color1{
+	color:#ee2f2f;
+	font-size:0.35rem;
+	font-weight:bold;
+	margin-right:0.3rem;
+}
+.foryou-shop .foryou-shop-font2 .color2{
+	font-size:0.2rem;
+	color:#999999;
+}
+.window-share{ 
+	position: fixed; 
+	left: 0; bottom: -4rem; 
+	width: 100%; z-index: 20; 
+	background: #fff; 
+	padding-top: .4rem;
+}
+.window-share li{ 
+	width: 1rem; 
+	float: left;
+	font-size: .24rem; 
+	margin-left:1.7rem; 
+	text-align: center;
+}
+.window-share li a{ 
+	display: block; 
+	color: #333;
+}
+.window-share li p{ 
+	padding: .3rem 0 .4rem;
+}
+.window-share .change-btn{ 
+	display: block; height: 1rem; 
+	line-height: 1rem; font-size: .33rem; 
+	border-top: 1px solid #d5d5d5; text-align: center; color: #333;
+}
+.window-share img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.window-bg{ 
+	position: fixed; 
+	left: 0; top: 0; 
+	width: 100%; height: 100%; 
+	z-index: 10; 
+	background: rgba(51,51,51,0.75); 
+	display: none;
+}
+.download{
+	width:100%;
+	height:1.40rem;
+	position:relative;
+	top:0;left:0;
+	display:none;
+}
+.download .download-now{
+	width:7.10rem;
+	height:1.18rem;
+	position:absolute;
+	left:0.20rem;
+	background:url(../images/hg-downp.png);
+	background-size:100%;
+	border-radius:4px;
+	text-indent:-999rem;
+}
