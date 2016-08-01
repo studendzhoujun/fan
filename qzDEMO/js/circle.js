@@ -1,52 +1,32 @@
 'use strict';
 //share
+var name='';
    $('.Qz-shareBtn').click(function(){
-          $('.window-share').animate({bottom:'0rem'},200);
-          $('.window-bg').show();
+        if(index==null||!name){
+          console.log('请选择性别or输入正确的姓名字符');
+        }else{
+          console.log(index);
+          location.href='index.html?index='+index+'&name='+name;
+        }
    });
-   $('.change-btn').click(function(){
-          $('.window-share').animate({bottom:'-4rem'},200);
-          $('.window-bg').hide();
-   });
-    
-   //分享到威信
-   $('.window-share li').eq(0).click(function(){
-        console.log('分享到微信');
-   });
-    //分享到朋友
-   $('.window-share li').eq(1).click(function(){
-        console.log('分享到朋友圈');
-    });
-   //距下次活动开始的时间
-   //var s=2805380;
-   //var h=s%86400;
-   //console.log(h);
-   function toDouble(num){
-      return num<10?'0'+num:num;
-   }
-   setInterval(function(){
+  var index=null;
+ $('.for-you-quanziBtn p').click(function(){
+       var _this=$(this);
+       index=$(this).index();
+       var sibling=_this.siblings();
+       switch(index){
+            case 0:
+                _this.addClass('on1');
+                sibling.removeClass('on2');
+            break;
+            case 1:
+                _this.addClass('on2');
+                sibling.removeClass('on1');
+            break;
+       }
+       //console.log(index);
+ });
 
-   var oDate=new Date();
-   //var s=oDate.getTime();
-   var h=oDate.getHours();
-   var m=oDate.getMinutes();
-   var s=oDate.getSeconds();
-   var str=toDouble(h)+':'+toDouble(m)+':'+toDouble(s);
-   $('.time-over span').html(str);
-   },1000);
-  //与app的通信;
-  //.btn1 提醒
-  //.btn2 取消取消提醒
-  //.btn4 加入圈子赢好礼
-  $('.Qz-foryou').on('click','.for-you-quanziBtn .btn1',function(){
-         alert('提醒');
-  });
-  $('.Qz-foryou').on('click','.for-you-quanziBtn .btn2',function(){
-         alert('取消取消提醒');
-  });
-  $('.Qz-foryou').on('click','.for-you-quanziBtn .btn4',function(){
-         alert('加入圈子赢好礼');
-  });
   //user-scroll
       var oUl=document.querySelector('ul');
       oUl.innerHTML+=oUl.innerHTML;

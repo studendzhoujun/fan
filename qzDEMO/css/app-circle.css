@@ -77,7 +77,10 @@
 	background:#fff;
 	color:#ee4b4b;
 	margin:0.25rem auto;
-	display:none;
+	display:block;
+}
+.for-you-quanziBtn .on1{
+	background:blue;
 }
 .for-you-quanziBtn .btn2{
 	width:2.30rem;
@@ -90,7 +93,10 @@
 	background:#fff;
 	color:#ee4b4b;
 	margin:0.25rem auto;
-	display:none;
+	display:block;
+}
+.for-you-quanziBtn .on2{
+	background:red;
 }
 .for-you-quanziBtn .btn3{
 	width:2.30rem;
