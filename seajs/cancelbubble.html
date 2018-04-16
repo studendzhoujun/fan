@@ -15,28 +15,28 @@
          	var oDiv2=document.querySelector('.div2');
          	var oDiv3=document.querySelector('.div3');
 
-         	oDiv1.onclick=function(){
-         		alert(1)
-         	};
-         	oDiv2.onclick=function(){
-         		alert(2)
-         	};
-         	oDiv3.onclick=function(ev){
-         		alert(3)
-         		var oEvent=ev||event;
-         		//oEvent.cancelBubble=true;
-         	};
-         	 /*
+         	// oDiv1.onclick=function(){
+         	// 	console.log('div1')
+         	// };
+         	// oDiv2.onclick=function(){
+         	// 	console.log('div2')
+         	// };
+         	// oDiv3.onclick=function(ev){
+         	// 	console.log('div3')
+         	// 	var oEvent=ev||event;
+         	// 	// oEvent.cancelBubble=true;
+         	// };
+         	
          	oDiv3.addEventListener('click',function(ev){
-         		alert(3)
+				console.log('div3')
          		ev.cancelBubble=true;
          	},false)
-         	oDiv2.addEventListener('click',function(){
-         		alert(2)
+         	oDiv2.addEventListener('click',function(ev){
+				console.log('div2')			
          	},false)
          	oDiv1.addEventListener('click',function(){
-         		alert(1)
-         	},false)*/
+				console.log('div1')
+         	},false)
 
          };
 	</script>
