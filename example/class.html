@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>class</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Person {
+        constructor(){
+            this._name=null
+        }
+        get name(){
+            return this._name
+        }
+        set name(value){
+            console.log('name changed')
+            this._name=value
+        }
+    }
+    let p = new Person()
+    console.log(p.name)
+    p.name='zhou'
+    console.log(p.name)
+
+</script>
+</html>
