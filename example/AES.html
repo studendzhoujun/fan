@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AES加密</title>
+</head>
+<body>
+    <div class="box">xxxxx</div>
+    <div class="box2">xxxxx</div>
+</body>
+<script src="https://misc.gomein.net.cn/plus/js/login/crypto.min.js" ></script>
+<script>
+      let options = {
+         mode: CryptoJS.mode.ECB,
+         padding: CryptoJS.pad.Pkcs7
+      };
+      let key = CryptoJS.enc.Utf8.parse("Keya")
+      let abc=CryptoJS.AES.encrypt('thisisaeskey',key,options)//AES 加密
+	//   let bcd=CryptoJS.MD5('thisismd5key')  //md5
+
+
+    //  AES 解密
+    let abcc = abc.ciphertext.toString();
+    let encryptedHexStr = CryptoJS.enc.Hex.parse(abcc);  
+    let encryptedBase64Str = CryptoJS.enc.Base64.stringify(encryptedHexStr);  
+    let bcd=CryptoJS.AES.decrypt(encryptedBase64Str,key,options)
+    let decryptedStr = bcd.toString(CryptoJS.enc.Utf8);
+
+
+
+
+      const oBox=document.querySelector('.box')
+      const oBox2=document.querySelector('.box2')
+
+      oBox.innerHTML=abc
+      oBox2.innerHTML=decryptedStr
+</script> 
+</html>
