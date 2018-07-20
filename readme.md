@@ -10,3 +10,4 @@
 - setstyle
 - share
 - typeof
+- fishman
