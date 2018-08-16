@@ -9,6 +9,7 @@
 <body>
     <div class="box">xxxxx</div>
     <div class="box2">xxxxx</div>
+    <div class="box3">xxxxx</div>
 </body>
 <script src="https://misc.gomein.net.cn/plus/js/login/crypto.min.js" ></script>
 <script>
@@ -29,12 +30,17 @@
     let decryptedStr = bcd.toString(CryptoJS.enc.Utf8);
 
 
-
+    // DES 加密
+      let deskey = CryptoJS.enc.Utf8.parse("12345678")
+      let des =CryptoJS.DES.encrypt('thisisdeskey',deskey,options)
 
       const oBox=document.querySelector('.box')
       const oBox2=document.querySelector('.box2')
+      const oBox3=document.querySelector('.box3')
 
       oBox.innerHTML=abc
       oBox2.innerHTML=decryptedStr
+      oBox3.innerHTML=des
+
 </script> 
 </html>
