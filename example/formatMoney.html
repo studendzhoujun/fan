@@ -11,9 +11,9 @@
 </body>
 <script>
      function toThousands(num) {
-        return (num || 0).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
+        return num.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
      }
-     var num=12532
+     var num=1322532.19
      console.log(toThousands(num))
 </script>
 </html>
