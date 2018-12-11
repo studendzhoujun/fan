@@ -1,7 +1,7 @@
 ![img](https://github.com/studendzhoujun/jun/blob/master/static/img/txx.png)
 # here is some example
-- 99-乘法表
-- AES-加密
+- 99
+- AES
 - getclassName
 - getstyle
 - geturlparam
